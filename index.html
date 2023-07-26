@@ -43,12 +43,10 @@
 </head>
 
 <body>
-
     <!-- Header Section -->
     <header class="max-w-screen-2xl m-auto my-12">
         <nav class="bg-[#F85559] py-8 px-12 rounded-full">
             <div class="navbar">
-
                 <div class="navbar-start">
                     <ul class="menu menu-horizontal px-1 text-lg font-medium text-white">
                         <li><a href="#">Home</a></li>
@@ -67,7 +65,7 @@
                 <div class="navbar-end">
                     <div class="form-control relative">
                         <input type="text" placeholder="Search here"
-                            class="input input-bordered w-24 md:w-auto rounded-full" />
+                            class="input input-bordered w-24 md:w-96 rounded-full" />
                         <button class="btn btn-ghost btn-circle absolute top-0 right-0 px-4 py-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -100,30 +98,31 @@
                 class="hidden md:flex text-center bg-white py-12 px-16 gap-20 mx-auto absolute bottom-0 drop-shadow-xl rounded-lg text-brand-dark text-xl font-medium">
                 <div class="card">
                     <img src="images/fruit1.png" alt="">
-                    <h4>Strawberry</h4>
+                    <h4 class="mt-2">Strawberry</h4>
                 </div>
                 <div class="card">
                     <img src="images/fruit2.png" alt="">
-                    <h4>Orange</h4>
+                    <h4 class="mt-2">Orange</h4>
                 </div>
                 <div class="card">
                     <img src="images/fruit3.png" alt="">
-                    <h4>Mango</h4>
+                    <h4 class="mt-2">Mango</h4>
                 </div>
                 <div class="card">
                     <img src="images/fruit4.png" alt="">
-                    <h4>Strawberry</h4>
+                    <h4 class="mt-2">Strawberry</h4>
                 </div>
                 <div class="card">
                     <img src="images/fruit5.png" alt="">
-                    <h4>Mango</h4>
+                    <h4 class="mt-2">Mango</h4>
                 </div>
             </div>
         </div>
 
         <!-- Deal of the day -->
-        <div class="my-36">
-            <div>
+        <div class="my-36 flex justify-center flex-col">
+            <!-- Upper -->
+            <div class="flex justify-between items-center">
                 <div>
                     <h1 class="text-5xl font-extrabold text-brand-dark">Deal of the day</h1>
                     <p class="font-medium text-brand-dark mt-6 mb-12">Contrary to popular belief, is not simply random
@@ -131,8 +130,40 @@
                         roots in a piece of classical <br> Latin
                         literature from 45 BC, making it over 2000 years old.</p>
                 </div>
-                <div></div>
+
+                <!-- Timer -->
+                <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                    <div class="flex flex-col">
+                        <span class="countdown font-extrabold text-5xl">
+                            <span style="--value:29;"></span>
+                        </span>
+                        Days
+                    </div>
+                    <span class="mt-3"><img src="images/separator.svg" alt=""></span>
+                    <div class="flex flex-col">
+                        <span class="countdown font-extrabold text-5xl">
+                            <span style="--value:15;"></span>
+                        </span>
+                        Hours
+                    </div>
+                    <span class="mt-3"><img src="images/separator.svg" alt=""></span>
+                    <div class="flex flex-col">
+                        <span class="countdown font-extrabold text-5xl">
+                            <span style="--value:25;"></span>
+                        </span>
+                        Minutes
+                    </div>
+                    <span class="mt-3"><img src="images/separator.svg" alt=""></span>
+                    <div class="flex flex-col">
+                        <span class="countdown font-extrabold text-5xl">
+                            <span style="--value:08;"></span>
+                        </span>
+                        Seconds
+                    </div>
+                </div>
             </div>
+
+            <!-- Cards -->
             <div class="flex flex-col lg:flex-row gap-6">
                 <div class="card grow bg-base-100 border">
                     <figure class="px-10 pt-10">
@@ -235,7 +266,7 @@
                 </div>
             </div>
             <button
-                class="btn btn-primary bg-brand-primary border-0 normal-case hover:bg-rose-600 text-white mt-12 ">Shop
+                class="btn btn-primary bg-brand-primary border-0 normal-case hover:bg-rose-600 text-white mt-12 mx-auto">Shop
                 All</button>
         </div>
 
@@ -331,11 +362,14 @@
                 <div>
 
                     <!-- Options -->
-                    <div class="mb-12">
-                        <div></div>
+                    <div class="mb-12 flex gap-6">
+                        <div>
+                            <i
+                                class="fa-solid fa-people-group w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
+                        </div>
                         <div>
                             <h3 class="text-2xl font-extrabold text-brand-dark">Dedicated Team</h3>
-                            <hr class="w-24 mt-5 mb-4">
+                            <hr class="w-24 mt-5 mb-4  border-brand-dark">
                             <p class="font-medium text-brand-dark">Professional employees are there for you to pick the
                                 most
                                 amazing and fresh fruits.</p>
@@ -343,22 +377,28 @@
                     </div>
 
                     <!-- Options -->
-                    <div class="mb-12">
-                        <div></div>
+                    <div class="mb-12 flex gap-6">
+                        <div>
+                            <i
+                                class="fa-solid fa-leaf w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
+                        </div>
                         <div>
                             <h3 class="text-2xl font-extrabold text-brand-dark">Fresh is Best</h3>
-                            <hr class="w-24 mt-5 mb-4">
+                            <hr class="w-24 mt-5 mb-4  border-brand-dark">
                             <p class="font-medium text-brand-dark">Professional employees are there for you to pick the
                                 most amazing and fresh fruits.</p>
                         </div>
                     </div>
 
                     <!-- Options -->
-                    <div class="">
-                        <div></div>
+                    <div class="flex gap-6">
+                        <div>
+                            <i
+                                class="fa-solid fa-gift w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
+                        </div>
                         <div>
                             <h3 class="text-2xl font-extrabold text-brand-dark">Gift Certificates</h3>
-                            <hr class="w-24 mt-5 mb-4">
+                            <hr class="w-24 mt-5 mb-4  border-brand-dark">
                             <p class="font-medium text-brand-dark">Professional employees are there for you to pick the
                                 most amazing and fresh fruits.</p>
                         </div>
@@ -372,35 +412,46 @@
                 <!-- Right -->
                 <div>
                     <!-- Options -->
-                    <div class="mb-12">
-                        <div></div>
+                    <div class="mb-12 flex gap-6">
+
                         <div class="text-right">
                             <h3 class="text-2xl font-extrabold text-brand-dark">Integrated Supplier</h3>
-                            <hr class="w-24 mt-5 mb-4 mr-0 ml-auto">
+                            <hr class="w-24 mt-5 mb-4 mr-0 ml-auto  border-brand-dark">
                             <p class="font-medium text-brand-dark">Professional employees are there for you to pick the
                                 most amazing and fresh fruits.</p>
+                        </div>
+                        <div>
+                            <i
+                                class="fa-solid fa-truck-field w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
                         </div>
                     </div>
 
                     <!-- Options -->
-                    <div class="mb-12">
-                        <div></div>
+                    <div class="mb-12 flex gap-6">
+
                         <div class="text-right">
                             <h3 class="text-2xl font-extrabold text-brand-dark">Sustainable Practice</h3>
-                            <hr class="w-24 mt-5 mb-4 mr-0 ml-auto">
+                            <hr class="w-24 mt-5 mb-4 mr-0 ml-auto  border-brand-dark">
                             <p class="font-medium text-brand-dark">Professional employees are there for you to pick the
                                 most amazing and fresh fruits.</p>
+                        </div>
+                        <div>
+                            <i
+                                class="fa-solid fa-clock w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
                         </div>
                     </div>
 
                     <!-- Options -->
-                    <div class="">
-                        <div></div>
+                    <div class="flex gap-6">
                         <div class="text-right">
                             <h3 class="text-2xl font-extrabold text-brand-dark">The Benefits Only</h3>
-                            <hr class="w-24 mt-5 mb-4 mr-0 ml-auto">
+                            <hr class="w-24 mt-5 mb-4 mr-0 ml-auto border-brand-dark">
                             <p class="font-medium text-brand-dark">Professional employees are there for you to pick the
                                 most amazing and fresh fruits.</p>
+                        </div>
+                        <div>
+                            <i
+                                class="fa-solid fa-arrow-trend-up w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
                         </div>
                     </div>
                 </div>
