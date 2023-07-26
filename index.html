@@ -82,8 +82,37 @@
     <!-- Main Section -->
     <main class="max-w-screen-2xl m-auto my-14">
         <!-- Hero Section -->
-        <div class="hero min-h-[600px]" style="background-image: url('images/banner1.png');">
-            <div class="hero-overlay bg-opacity-70"></div>
+        <div class="hero">
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="/images/banner1.png" class="w-full brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="/images/banner2.png" class="w-full brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="/images/banner3.png" class="w-full brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="/images/banner4.png" class="w-full brightness-50" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
             <div class="hero-content text-center text-white">
                 <div class="max-w-lg">
                     <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
@@ -95,7 +124,7 @@
             </div>
             <!-- Featured Products -->
             <div
-                class="hidden md:flex text-center bg-white py-12 px-16 gap-20 mx-auto absolute bottom-0 drop-shadow-xl rounded-lg text-brand-dark text-xl font-medium">
+                class="hidden md:flex text-center bg-white py-12 px-16 gap-20 mx-auto absolute -bottom-10 drop-shadow-xl rounded-lg text-brand-dark text-xl font-medium">
                 <div class="card">
                     <img src="images/fruit1.png" alt="">
                     <h4 class="mt-2">Strawberry</h4>
@@ -125,10 +154,9 @@
             <div class="flex justify-between items-center">
                 <div>
                     <h1 class="text-5xl font-extrabold text-brand-dark">Deal of the day</h1>
-                    <p class="font-medium text-brand-dark mt-6 mb-12">Contrary to popular belief, is not simply random
-                        text. It has
-                        roots in a piece of classical <br> Latin
-                        literature from 45 BC, making it over 2000 years old.</p>
+                    <p class="font-medium text-brand-dark mt-6 mb-12">Get your daily dose of freshness with our
+                        unbeatable deal of the day on the juiciest and ripest fruits! <br> Savor the flavor of savings
+                        with today's special deal on our freshest fruits!</p>
                 </div>
 
                 <!-- Timer -->
@@ -171,8 +199,8 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">12.90$ - 18.85$</h2>
-                        <p>Apples</p>
-                        <div class="rating rating-lg rating-half">
+                        <p class="font-medium">Apples</p>
+                        <div class="rating rating-md rating-half my-2">
                             <input type="radio" name="rating-1" class="rating-hidden" />
                             <input type="radio" name="rating-1" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-1" class="bg-brand-primary mask mask-star-2 mask-half-2" />
@@ -186,7 +214,7 @@
                             <input type="radio" name="rating-1" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-1" class="bg-brand-primary mask mask-star-2 mask-half-2" />
                         </div>
-                        <a class="link link-hover">Details</a>
+                        <a class="link link-hover text-lg font-bold text-brand-primary">Details</a>
                     </div>
                 </div>
 
@@ -196,8 +224,8 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">12.90$ - 18.85$</h2>
-                        <p>Orange</p>
-                        <div class="rating rating-lg rating-half">
+                        <p class="font-medium">Orange</p>
+                        <div class="rating rating-md rating-half my-2">
                             <input type="radio" name="rating-2" class="rating-hidden" />
                             <input type="radio" name="rating-2" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-2" class="bg-brand-primary mask mask-star-2 mask-half-2" />
@@ -211,7 +239,7 @@
                             <input type="radio" name="rating-2" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-2" class="bg-brand-primary mask mask-star-2 mask-half-2" />
                         </div>
-                        <a class="link link-hover">Details</a>
+                        <a class="link link-hover text-lg font-bold text-brand-primary">Details</a>
                     </div>
                 </div>
 
@@ -221,8 +249,8 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">12.90$ - 18.85$</h2>
-                        <p>Red Dragon</p>
-                        <div class="rating rating-lg rating-half">
+                        <p class="font-medium">Red Dragon</p>
+                        <div class="rating rating-md rating-half my-2">
                             <input type="radio" name="rating-3" class="rating-hidden" />
                             <input type="radio" name="rating-3" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-3" class="bg-brand-primary mask mask-star-2 mask-half-2" />
@@ -236,7 +264,7 @@
                             <input type="radio" name="rating-3" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-3" class="bg-brand-primary mask mask-star-2 mask-half-2" />
                         </div>
-                        <a class="link link-hover">Details</a>
+                        <a class="link link-hover text-lg font-bold text-brand-primary">Details</a>
                     </div>
                 </div>
 
@@ -246,8 +274,8 @@
                     </figure>
                     <div class="card-body items-center text-center">
                         <h2 class="card-title">12.90$ - 18.85$</h2>
-                        <p>Banana</p>
-                        <div class="rating rating-lg rating-half">
+                        <p class="font-medium">Banana</p>
+                        <div class="rating rating-md rating-half my-2">
                             <input type="radio" name="rating-4" class="rating-hidden" />
                             <input type="radio" name="rating-4" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-4" class="bg-brand-primary mask mask-star-2 mask-half-2" />
@@ -261,7 +289,7 @@
                             <input type="radio" name="rating-4" class="bg-brand-primary mask mask-star-2 mask-half-1" />
                             <input type="radio" name="rating-4" class="bg-brand-primary mask mask-star-2 mask-half-2" />
                         </div>
-                        <a class="link link-hover">Details</a>
+                        <a class="link link-hover text-lg font-bold text-brand-primary">Details</a>
                     </div>
                 </div>
             </div>
@@ -275,9 +303,10 @@
             <div class="hero-overlay bg-opacity-70"></div>
             <div class="text-center text-white">
                 <div class="max-w-3xl mx-auto mb-12">
-                    <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
-                    <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of
-                        classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    <h1 class="mb-5 text-5xl font-bold">Meet Our Team</h1>
+                    <p class="mb-5">Our dedicated team of experienced fruit enthusiasts is committed to providing you
+                        with the finest produce, handpicked and delivered with care, ensuring a delightful and healthy
+                        experience for all our valued customers.</p>
                 </div>
 
                 <div class="flex mx-auto gap-24">
@@ -352,10 +381,10 @@
         <!-- Why Choose Us -->
         <div class="my-36">
             <h1 class="text-5xl font-extrabold text-brand-dark text-center">Why Choose Us</h1>
-            <p class="font-medium text-brand-dark mt-6 mb-12 text-center">Contrary to popular belief, is not simply
-                random text. It
-                has roots in a piece of classical <br> Latin
-                literature from 45 BC, making it over 2000 years old.</p>
+            <p class="font-medium text-brand-dark mt-6 mb-12 text-center">Choose us for an unmatched fruit shopping
+                experience with our handpicked selection of premium quality fruits,<br> personalized customer service,
+                and
+                commitment to ensuring your satisfaction</p>
 
             <div class="flex gap-12">
                 <!-- Left -->
