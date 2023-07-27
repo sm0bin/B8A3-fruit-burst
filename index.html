@@ -50,11 +50,39 @@
 
 <body>
     <!-- Header Section -->
-    <header class="mx-5 md:max-w-screen-2xl md:mx-auto my-12">
-        <nav class="bg-[#F85559] py-8 px-12 rounded-full">
-            <div class="navbar">
-                <div class="navbar-start">
-                    <ul class="menu menu-horizontal px-1 text-lg font-medium text-white">
+    <header class="mx-5 md:mx-8 lg:mx-auto lg:max-w-screen-2xl my-8 md:my-12">
+        <!-- mobile navbar -->
+        <nav class="navbar bg-base-100 flex justify-between items-center md:hidden">
+            <div>
+                <a class="flex items-center gap-2 text-xl text-brand-dark font-bold">
+                    <img src="images/logo.png" alt="logo" class="h-8 w-auto">
+                    Fruit Burst</a>
+            </div>
+            <div>
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost btn-circle w-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block w-5 h-5 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 right-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Desktop navbar -->
+        <nav class="bg-[#F85559] py-2 lg:py-8 px-2 lg:px-12 rounded-full hidden md:block">
+            <div class="flex justify-between items-center">
+                <div>
+                    <ul class="menu menu-horizontal px-1 text-base lg:text-lg font-medium text-white">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Shop</a></li>
@@ -62,13 +90,13 @@
                     </ul>
                 </div>
 
-                <div class="navbar-center">
-                    <a class="btn btn-ghost normal-case text-4xl align-middle text-white font-bold">
+                <div>
+                    <a class="flex items-center gap-2 pr-4 lg:pr-0 lg:gap-4 text-2xl lg:text-4xl text-white font-bold">
                         <img src="images/logo.png" alt="logo" class="h-full">
                         Fruit Burst</a>
                 </div>
 
-                <div class="navbar-end">
+                <div class="hidden lg:block">
                     <div class="form-control relative">
                         <input type="text" placeholder="Search here"
                             class="input input-bordered w-24 md:w-96 rounded-full" />
@@ -86,43 +114,51 @@
     </header>
 
     <!-- Main Section -->
-    <main class="mx-5 md:max-w-screen-2xl md:mx-auto my-14">
+    <main class="mx-5 md:mx-8 lg:mx-auto lg:max-w-screen-2xl my-14">
         <!-- Hero Section -->
-        <div class="hero">
-            <div class="carousel w-full">
+        <div class="hero rounded-lg">
+            <div class="carousel h-full rounded-lg">
                 <div id="slide1" class="carousel-item relative w-full">
                     <img src="/images/banner1.png" class="w-full brightness-50" />
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" class="btn btn-circle">❮</a>
-                        <a href="#slide2" class="btn btn-circle">❯</a>
+                        <a href="#slide4"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❮</a>
+                        <a href="#slide2"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❯</a>
                     </div>
                 </div>
                 <div id="slide2" class="carousel-item relative w-full">
                     <img src="/images/banner2.png" class="w-full brightness-50" />
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" class="btn btn-circle">❮</a>
-                        <a href="#slide3" class="btn btn-circle">❯</a>
+                        <a href="#slide1"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❮</a>
+                        <a href="#slide3"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❯</a>
                     </div>
                 </div>
                 <div id="slide3" class="carousel-item relative w-full">
                     <img src="/images/banner3.png" class="w-full brightness-50" />
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" class="btn btn-circle">❮</a>
-                        <a href="#slide4" class="btn btn-circle">❯</a>
+                        <a href="#slide2"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❮</a>
+                        <a href="#slide4"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❯</a>
                     </div>
                 </div>
                 <div id="slide4" class="carousel-item relative w-full">
                     <img src="/images/banner4.png" class="w-full brightness-50" />
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" class="btn btn-circle">❮</a>
-                        <a href="#slide1" class="btn btn-circle">❯</a>
+                        <a href="#slide3"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❮</a>
+                        <a href="#slide1"
+                            class="btn btn-circle bg-brand-dark text-white border-none hover:bg-gray-700">❯</a>
                     </div>
                 </div>
             </div>
-            <div class="hero-content text-center text-white">
-                <div class="max-w-lg">
-                    <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your doorstep</h1>
-                    <p class="mb-5">We supply highly quality organic products</p>
+            <div class="pointer-events-none md:pointer-events-auto hero-content text-center text-white py-7">
+                <div class="pointer-events-none md:pointer-events-auto max-w-lg">
+                    <h1 class="mb-5 text-2xl md:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                    <p class="mb-5 text-sm md:text-base mx-10">We supply highly quality organic products</p>
                     <button
                         class="btn btn-primary bg-brand-primary border-0 normal-case hover:bg-rose-600 text-white">Shop
                         Now</button>
@@ -130,7 +166,7 @@
             </div>
             <!-- Featured Products -->
             <div
-                class="hidden md:flex text-center bg-white py-12 px-16 gap-20 mx-auto absolute -bottom-10 drop-shadow-xl rounded-lg text-brand-dark text-xl font-medium">
+                class="hidden lg:flex text-center bg-white py-12 px-16 gap-20 mx-auto absolute -bottom-10 drop-shadow-xl rounded-lg text-brand-dark text-xl font-medium">
                 <div class="card">
                     <img src="images/fruit1.png" alt="">
                     <h4 class="mt-2">Strawberry</h4>
@@ -157,8 +193,8 @@
         <!-- Deal of the day -->
         <div class=" my-6 md:my-36 flex justify-center flex-col">
             <!-- Upper -->
-            <div class="flex justify-between items-center flex-col md:flex-row">
-                <div class=" text-center md:text-left px-12">
+            <div class="flex justify-between items-center flex-col lg:flex-row">
+                <div class=" text-center lg:text-left px-12">
                     <h1 class="text-xl md:text-5xl font-extrabold text-brand-dark">Deal of the
                         day</h1>
                     <p class="text-sm md:text-base font-medium text-brand-dark opacity-60 mt-6 mb-12">Get your daily
@@ -201,7 +237,7 @@
             </div>
 
             <!-- Cards -->
-            <div class="flex flex-col lg:flex-row gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="card grow bg-base-100 border">
                     <figure class="px-10 pt-10">
                         <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
@@ -312,10 +348,10 @@
         </div>
 
         <!-- Meet the team section -->
-        <div class="hero my-6 md:my-36 py-6 md:py-32 rounded-lg" style="background-image: url('images/banner1.png');">
-            <div class="hero-overlay bg-opacity-70"></div>
+        <div
+            class="hero my-6 md:my-36 py-6 md:py-32 rounded-lg bg-[url('./images/banner1.png')] bg-blend-multiply bg-gray-600">
             <div class="text-center text-white">
-                <div class="max-w-3xl mx-auto mb-12 px-8">
+                <div class="max-w-3xl mx-auto mb-12 px-8 md:px-16">
                     <h1 class="mb-5 text-xl md:text-5xl font-bold">Meet Our Team</h1>
                     <p class="mb-5 text-sm md:text-base">Our dedicated team of experienced fruit enthusiasts
                         is
@@ -325,7 +361,7 @@
                         experience for all our valued customers.</p>
                 </div>
 
-                <div class="flex mx-auto gap-12 md:gap-24 flex-col md:flex-row">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto gap-0 gap-y-12 lg:gap-24">
                     <div class="flex flex-col justify-center items-center">
                         <div class="avatar mb-8 w-36 h-36">
                             <div class="rounded-full">
@@ -408,19 +444,19 @@
                 and
                 commitment to ensuring your satisfaction</p>
 
-            <div class="flex gap-12  flex-col md:flex-row">
+            <div class="flex gap-12  flex-col lg:flex-row">
                 <!-- Left -->
-                <div>
+                <div class=" md:px-24 lg:px-0">
 
                     <!-- Options -->
-                    <div class="mb-12 flex gap-6  flex-col md:flex-row text-center md:text-left">
+                    <div class="mb-12 flex gap-6  flex-col lg:flex-row text-center lg:text-left">
                         <div>
                             <i
                                 class="mx-auto fa-solid fa-people-group w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
                         </div>
                         <div>
                             <h3 class="text-2xl font-extrabold text-brand-dark">Dedicated Team</h3>
-                            <hr class="w-24 mt-5 mb-4 mx-auto md:ml-0 border-brand-dark">
+                            <hr class="w-24 mt-5 mb-4 mx-auto lg:ml-0 border-brand-dark">
                             <p class="font-medium text-brand-dark opacity-60">Professional employees are there for you
                                 to pick the
                                 most
@@ -429,14 +465,14 @@
                     </div>
 
                     <!-- Options -->
-                    <div class="mb-12 flex gap-6  flex-col md:flex-row text-center md:text-left">
+                    <div class="mb-12 flex gap-6  flex-col lg:flex-row text-center lg:text-left">
                         <div>
                             <i
                                 class="mx-auto fa-solid fa-leaf w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
                         </div>
                         <div>
                             <h3 class="text-2xl font-extrabold text-brand-dark">Fresh is Best</h3>
-                            <hr class="w-24 mt-5 mb-4 mx-auto md:ml-0 border-brand-dark">
+                            <hr class="w-24 mt-5 mb-4 mx-auto lg:ml-0 border-brand-dark">
                             <p class="font-medium text-brand-dark opacity-60">Professional employees are there for you
                                 to pick the
                                 most amazing and fresh fruits.</p>
@@ -444,14 +480,14 @@
                     </div>
 
                     <!-- Options -->
-                    <div class="flex gap-6  flex-col md:flex-row text-center md:text-left">
+                    <div class="flex gap-6  flex-col lg:flex-row text-center lg:text-left">
                         <div>
                             <i
                                 class="mx-auto fa-solid fa-gift w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
                         </div>
                         <div>
                             <h3 class="text-2xl font-extrabold text-brand-dark">Gift Certificates</h3>
-                            <hr class="w-24 mt-5 mb-4 mx-auto md:ml-0 border-brand-dark">
+                            <hr class="w-24 mt-5 mb-4 mx-auto lg:ml-0 border-brand-dark">
                             <p class="font-medium text-brand-dark opacity-60">Professional employees are there for you
                                 to pick the
                                 most amazing and fresh fruits.</p>
@@ -461,12 +497,12 @@
                 </div>
 
                 <!-- Center -->
-                <img class="order-first md:order-none" src="images/whychoose1.png" alt="">
+                <img class="order-first lg:order-none" src="images/whychoose1.png" alt="">
 
                 <!-- Right -->
-                <div>
+                <div class=" md:px-24 lg:px-0">
                     <!-- Options -->
-                    <div class="mb-12 flex gap-6  flex-col md:flex-row-reverse text-center md:text-right">
+                    <div class="mb-12 flex gap-6  flex-col lg:flex-row-reverse text-center lg:text-right">
                         <div>
                             <i
                                 class="mx-auto fa-solid fa-truck-field w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
@@ -474,7 +510,7 @@
 
                         <div class="">
                             <h3 class="text-2xl font-extrabold text-brand-dark">Integrated Supplier</h3>
-                            <hr class="w-24 mt-5 mb-4 mr-auto md:mr-0 ml-auto  border-brand-dark">
+                            <hr class="w-24 mt-5 mb-4 mr-auto lg:mr-0 ml-auto  border-brand-dark">
                             <p class="font-medium text-brand-dark opacity-60">Professional employees are there for you
                                 to pick the
                                 most amazing and fresh fruits.</p>
@@ -482,7 +518,7 @@
                     </div>
 
                     <!-- Options -->
-                    <div class="mb-12 flex gap-6  flex-col md:flex-row-reverse text-center md:text-right">
+                    <div class="mb-12 flex gap-6  flex-col lg:flex-row-reverse text-center lg:text-right">
                         <div>
                             <i
                                 class="mx-auto fa-solid fa-clock w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
@@ -490,7 +526,7 @@
 
                         <div class="">
                             <h3 class="text-2xl font-extrabold text-brand-dark">Sustainable Practice</h3>
-                            <hr class="w-24 mt-5 mb-4 mr-auto md:mr-0 ml-auto  border-brand-dark">
+                            <hr class="w-24 mt-5 mb-4 mr-auto lg:mr-0 ml-auto  border-brand-dark">
                             <p class="font-medium text-brand-dark opacity-60">Professional employees are there for you
                                 to pick the
                                 most amazing and fresh fruits.</p>
@@ -498,7 +534,7 @@
                     </div>
 
                     <!-- Options -->
-                    <div class="flex gap-6  flex-col md:flex-row-reverse text-center md:text-right">
+                    <div class="flex gap-6  flex-col lg:flex-row-reverse text-center lg:text-right">
                         <div>
                             <i
                                 class="mx-auto fa-solid fa-arrow-trend-up w-16 h-16 rounded-full bg-gray-300 flex justify-center items-center text-xl"></i>
@@ -506,7 +542,7 @@
 
                         <div class="">
                             <h3 class="text-2xl font-extrabold text-brand-dark">The Benefits Only</h3>
-                            <hr class="w-24 mt-5 mb-4 mr-auto md:mr-0 ml-auto border-brand-dark">
+                            <hr class="w-24 mt-5 mb-4 mr-auto lg:mr-0 ml-auto border-brand-dark">
                             <p class="font-medium text-brand-dark opacity-60">Professional employees are there for you
                                 to pick the
                                 most amazing and fresh fruits.</p>
@@ -553,7 +589,7 @@
     <div id="popup-modal-1" tabindex="-1"
         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-lg max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 p-16">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 p-0 md:p-12 lg:p-16">
                 <button type="button"
                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-hide="popup-modal-1">
@@ -564,7 +600,7 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
-                <!-- <div class="card w-96 bg-base-100 shadow-xl"> -->
+
                 <figure class="px-10 pt-10 m-auto">
                     <img src="/images/fruit6.png" alt="Shoes" class="m-auto" />
                 </figure>
@@ -597,7 +633,6 @@
                             Now</button>
                     </div>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -606,7 +641,7 @@
     <div id="popup-modal-2" tabindex="-1"
         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-lg max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 p-16">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700  p-0 md:p-12 lg:p-16">
                 <button type="button"
                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-hide="popup-modal-2">
@@ -617,7 +652,6 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
-                <!-- <div class="card w-96 bg-base-100 shadow-xl"> -->
                 <figure class="px-10 pt-10 m-auto">
                     <img src="/images/fruit7.png" alt="Shoes" class="m-auto" />
                 </figure>
@@ -650,7 +684,6 @@
                             Now</button>
                     </div>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -659,7 +692,7 @@
     <div id="popup-modal-3" tabindex="-1"
         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-lg max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 p-16">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700  p-0 md:p-12 lg:p-16">
                 <button type="button"
                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-hide="popup-modal-3">
@@ -670,7 +703,6 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
-                <!-- <div class="card w-96 bg-base-100 shadow-xl"> -->
                 <figure class="px-10 pt-10 m-auto">
                     <img src="/images/fruit8.png" alt="Shoes" class="m-auto" />
                 </figure>
@@ -703,7 +735,6 @@
                             Now</button>
                     </div>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -712,7 +743,7 @@
     <div id="popup-modal-4" tabindex="-1"
         class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative w-full max-w-lg max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700 p-16">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700  p-0 md:p-12 lg:p-16">
                 <button type="button"
                     class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-hide="popup-modal-4">
@@ -723,7 +754,6 @@
                     </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
-                <!-- <div class="card w-96 bg-base-100 shadow-xl"> -->
                 <figure class="px-10 pt-10 m-auto">
                     <img src="/images/fruit9.png" alt="Shoes" class="m-auto" />
                 </figure>
@@ -756,7 +786,6 @@
                             Now</button>
                     </div>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
     </div>
